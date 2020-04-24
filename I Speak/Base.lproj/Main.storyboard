@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="I_Speak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gA0-J8-qB3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="language-banner" translatesAutoresizingMaskIntoConstraints="NO" id="g5o-WG-b4j">
+                                <rect key="frame" x="32" y="25.000000000000007" width="350" height="122.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="g5o-WG-b4j" secondAttribute="height" multiplier="2496:875" id="cBl-0U-HxB"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="s7G-cC-bJf"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="yqH-Bq-WeV"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LanguageCard" translatesAutoresizingMaskIntoConstraints="NO" id="0ue-nz-DZ9">
+                                <rect key="frame" x="32" y="167.66666666666663" width="350" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="JgY-zc-tcA"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="Oa6-LQ-fj3"/>
+                                    <constraint firstAttribute="width" secondItem="0ue-nz-DZ9" secondAttribute="height" multiplier="358:225" id="cmf-ul-42S"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type A Short Sentence In Your Language And We Will Generate The Language Card For You" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFp-tK-Hl6">
+                                <rect key="frame" x="57" y="397.66666666666669" width="300" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FbP-uj-OSM"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="f8a-XY-q7y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Say Something !" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MmH-q7-bIu">
+                                <rect key="frame" x="84.666666666666686" y="508.66666666666674" width="245" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="TVY-OE-5fg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="245" id="bRd-wC-vgd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="updateText:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="XIg-ew-KQy"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMK-iE-aRq">
+                                <rect key="frame" x="84.666666666666686" y="599.66666666666663" width="245" height="66"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="TpE-QQ-onb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="245" id="XQh-8m-4At"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <state key="normal" title="Save Photo">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="BYZ-38-t0r" eventType="touchDown" id="nJJ-j1-F8e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vMK-iE-aRq" firstAttribute="top" secondItem="MmH-q7-bIu" secondAttribute="bottom" constant="20" id="0KR-mS-EAt"/>
+                            <constraint firstItem="gA0-J8-qB3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="T0l-9E-ejQ"/>
+                            <constraint firstItem="gA0-J8-qB3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Uvi-yZ-YdR"/>
+                            <constraint firstItem="0ue-nz-DZ9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WJx-Tz-Yzg"/>
+                            <constraint firstItem="PFp-tK-Hl6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y4a-qZ-A5y"/>
+                            <constraint firstItem="vMK-iE-aRq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZX3-WC-JJe"/>
+                            <constraint firstItem="MmH-q7-bIu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bKZ-CT-EDW"/>
+                            <constraint firstAttribute="bottom" secondItem="gA0-J8-qB3" secondAttribute="bottom" id="bao-Q2-4xa"/>
+                            <constraint firstItem="0ue-nz-DZ9" firstAttribute="top" secondItem="g5o-WG-b4j" secondAttribute="bottom" constant="20" id="fQ3-Nq-VWt"/>
+                            <constraint firstItem="g5o-WG-b4j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fWy-NS-F7m"/>
+                            <constraint firstItem="g5o-WG-b4j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="fad-k8-4cx"/>
+                            <constraint firstItem="PFp-tK-Hl6" firstAttribute="top" secondItem="0ue-nz-DZ9" secondAttribute="bottom" constant="10" id="htV-A1-VgH"/>
+                            <constraint firstItem="gA0-J8-qB3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iDk-Ru-nTq"/>
+                            <constraint firstAttribute="trailing" secondItem="gA0-J8-qB3" secondAttribute="trailing" id="jSx-B2-8ak"/>
+                            <constraint firstItem="MmH-q7-bIu" firstAttribute="top" secondItem="PFp-tK-Hl6" secondAttribute="bottom" constant="50" id="w0T-4t-DMa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="background" destination="gA0-J8-qB3" id="Msl-2f-tHG"/>
+                        <outlet property="instruction" destination="PFp-tK-Hl6" id="ifN-Ax-lNN"/>
+                        <outlet property="languageCard" destination="0ue-nz-DZ9" id="0Dd-CO-IWS"/>
+                        <outlet property="saveButton" destination="vMK-iE-aRq" id="g7w-2R-hNp"/>
+                        <outlet property="textField" destination="MmH-q7-bIu" id="2oO-w6-wmT"/>
+                        <outlet property="welcome" destination="g5o-WG-b4j" id="wrd-3f-gyE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="119.86607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LanguageCard" width="531" height="306"/>
+        <image name="language-banner" width="4992" height="1750"/>
+    </resources>
+</document>
